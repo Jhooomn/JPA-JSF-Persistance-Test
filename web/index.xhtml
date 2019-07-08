@@ -23,9 +23,8 @@
 
             </p:panelGrid>
             <h:commandButton value="registrar" action="#{pacienteController.registrar()}"/>
-            <p:growl />
 
-            <p:dataTable var="pac" value="#{pacienteController.pacientes}">
+            <p:dataTable var="pac" value="#{pacienteController.pacientes}" style="text-align: center;">
                 <p:column headerText="Identificacion">
                     <h:outputText value="#{pac.identificacion}" />
                 </p:column>
@@ -41,7 +40,9 @@
                 <p:column headerText="Sexo">
                     <h:outputText value="#{pac.sexo}" />
                 </p:column>
+
             </p:dataTable>
+            <p:growl />
 
         </h:form>
 
